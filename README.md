@@ -25,4 +25,22 @@ In this section, I determined the current value of a member’s cryptocurrency w
 * Calculate the value, in Canadian dollars, of the current amount of each cryptocurrency and of the entire cryptocurrency wallet.
 
 ### Evaluate the Stock and Bond Holdings by Using the Alpaca SDK
-In this section, I determined the current value of a member’s stock and bond holdings. I made an API call to Alpaca via the Alpaca SDK to get the current closing prices of the SPDR S&P 500 ETF Trust (ticker: SPY) and of the iShares Core US Aggregate Bond ETF (ticker: AGG). For the prototype, I  assumed that the member holds 110 shares of SPY, which represents the stock portion of their portfolio and 200 shares of AGG, which represents the bond portion. The process to 
+In this section, I determined the current value of a member’s stock and bond holdings. I made an API call to Alpaca via the Alpaca SDK to get the current closing prices of the SPDR S&P 500 ETF Trust (ticker: SPY) and of the iShares Core US Aggregate Bond ETF (ticker: AGG). For the prototype, I  assumed that the member holds 110 shares of SPY, which represents the stock portion of their portfolio and 200 shares of AGG, which represents the bond portion. The process for the above discussed is as follows : 
+* Create two variables named my_agg and my_spy and set them equal to 200 and 50, respectively.
+* Set the variables for the Alpaca API and secret keys. Using the Alpaca SDK, create the Alpaca tradeapi.REST object. In this object, include the parameters for the Alpaca API key, the secret key, and the version number.
+* Set the following parameters for the Alpaca API call:
+** tickers: Use the tickers for the member’s stock and bond holdings.
+** timeframe: Use a time frame of one day.
+** start_date and end_date: Use the same date for these parameters, and format them with the date of the previous weekday (or 2020-08-07). This is because you want the one closing price for the most-recent trading day.
+* Get the current closing prices for SPY and AGG by using the Alpaca get_bars function. Format the response as a Pandas DataFrame by including the df property at the end of the get_bars function.
+* Navigating the Alpaca response DataFrame, select the SPY and AGG closing prices, and store them as variables.
+* Calculate the value, in dollars, of the current amount of shares in each of the stock and bond portions of the portfolio, and print the results.
+### Evaluate the Emergency Fund
+In this section, I had to use the valuations for the cryptocurrency wallet and for the stock and bond portions of the portfolio to determine if the credit union member has enough savings to build an emergency fund into their financial plan which can be done using the steps below.
+* Create a variable called monthly_income and set its value to 12000.
+* To analyze savings health, create a DataFrame called df_savings with two rows. Store the total value in dollars of the crypto assets in the first row and the total value of the shares in the second row.
+* Use the df_savings DataFrame to plot a pie chart to visualize the composition of personal savings.
+* Use if conditional statements to validate if the current savings are enough for an emergency fund. An ideal emergency fund should be equal to three times your monthly income.
+** If total savings are greater than the emergency fund, display a message congratulating the person for having enough money in this fund.
+** 
+
