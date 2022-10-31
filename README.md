@@ -66,6 +66,6 @@ The CTO of the credit union is impressed with my work on these planning tools bu
 * Forecast the cumulative returns for 10 years from now. Because of the shortened investment horizon (30 years to 10 years), the portfolio needs to invest more heavily in the riskier asset—that is, stock—to help accumulate wealth for retirement.
 * Adjust the weights of the retirement portfolio so that the composition for the Monte Carlo simulation consists of 20% bonds and 80% stocks.
 * Run the simulation over 500 samples, and use the same data that the API call to Alpaca generated.
-* Based on the new Monte Carlo simulation, answered the following questions in your Jupyter notebook:
+* Based on the new Monte Carlo simulation, answered the following:
     * Using the current value of only the stock and bond portion of the member's portfolio and the summary statistics that you generated from the new Monte Carlo simulation, what are the lower and upper bounds for the expected value of the portfolio (with the new weights) with a 95% confidence interval?
     * Will weighting the portfolio more heavily toward stocks allow the credit union members to retire after only 10 years?
