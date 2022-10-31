@@ -40,7 +40,7 @@ In this section, I had to use the valuations for the cryptocurrency wallet and f
 * Create a variable called monthly_income and set its value to 12000.
 * To analyze savings health, create a DataFrame called df_savings with two rows. Store the total value in dollars of the crypto assets in the first row and the total value of the shares in the second row.
 * Use the df_savings DataFrame to plot a pie chart to visualize the composition of personal savings.
-Markup : * Use if conditional statements to validate if the current savings are enough for an emergency fund. An ideal emergency fund should be equal to three times your monthly income.
+Markup : * Use if conditional statements to validate if the current savings are enough for an emergency fund. An ideal emergency fund should be equal to three times your monthly income
 ** If total savings are greater than the emergency fund, display a message congratulating the person for having enough money in this fund.
 
 
